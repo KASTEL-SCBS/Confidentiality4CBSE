@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="confidentiality" nsURI="http://edu.kit.kastel.scbs.confidentiality"
+    nsPrefix="edu.kit.kastel.scbs.confidentiality">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="IdentifiedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfidentialitySpecification" eSuperTypes="#//IdentifiedElement #//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataIdentifier" lowerBound="1"
+        upperBound="-1" eType="#//data/DataIdentifying" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataSetMaps" upperBound="-1"
+        eType="#//data/DataSetMap" containment="true" eOpposite="#//data/DataSetMap/specificationContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parametersAndDataPairs"
+        lowerBound="1" upperBound="-1" eType="#//repository/ParametersAndDataPair"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="addedFunctionalParameters"
+        upperBound="-1" eType="#//repository/AddedFunctionalParameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataParameterSubstitutions"
+        upperBound="-1" eType="#//system/AbstractDataParameterSubstitution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataParameterUsages" upperBound="-1"
+        eType="#//system/DataParameterUsage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" lowerBound="1"
+        upperBound="-1" eType="#//resources/Location" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tamperProtections" upperBound="-1"
+        eType="#//resources/TamperProtection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationsAndTamperProtectionsPairs"
+        lowerBound="1" upperBound="-1" eType="#//resources/LocationsAndTamperProtectionsPair"
+        containment="true"/>
+  </eClassifiers>
+  <eSubpackages name="data" nsURI="http://edu.kit.kastel.scbs.confidentiality/data"
+      nsPrefix="edu.kit.kastel.scbs.confidentiality.data">
+    <eClassifiers xsi:type="ecore:EClass" name="DataIdentifying" abstract="true" eSuperTypes="#//IdentifiedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="UnparameterizedDataIdentifying" abstract="true"
+        eSuperTypes="#//data/DataIdentifying"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DataSet" eSuperTypes="#//data/UnparameterizedDataIdentifying #//NamedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DataSetMap" eSuperTypes="#//IdentifiedElement #//NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="specificationContainer"
+          lowerBound="1" eType="#//ConfidentialitySpecification" eOpposite="#//ConfidentialitySpecification/dataSetMaps"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DataParameter" eSuperTypes="#//data/DataIdentifying #//NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="definingFunctionalParameter"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractDataSetMapEntry" abstract="true"
+        eSuperTypes="#//data/DataIdentifying">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="map" lowerBound="1" eType="#//data/DataSetMap"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DataSetMapEntry" eSuperTypes="#//data/AbstractDataSetMapEntry #//data/UnparameterizedDataIdentifying #//NamedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterizedDataSetMapEntry" eSuperTypes="#//data/AbstractDataSetMapEntry">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+          eType="#//data/DataParameter"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="repository" nsURI="http://edu.kit.kastel.scbs.confidentiality.repository"
+      nsPrefix="edu.kit.kastel.scbs.confidentiality.repository">
+    <eClassifiers xsi:type="ecore:EClass" name="ParametersAndDataPair" eSuperTypes="#//IdentifiedElement #//NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterSources" lowerBound="1"
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataTargets" lowerBound="1"
+          upperBound="-1" eType="#//data/DataIdentifying"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AddedFunctionalParameter" eSuperTypes="#//IdentifiedElement #//NamedElement"/>
+  </eSubpackages>
+  <eSubpackages name="system" nsURI="http://edu.kit.kastel.scbs.confidentiality.system"
+      nsPrefix="edu.kit.kastel.scbs.confidentiality.system">
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractDataParameterSubstitution"
+        abstract="true" eSuperTypes="#//IdentifiedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataParametersToReplace"
+          lowerBound="1" upperBound="-1" eType="#//data/DataParameter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DataParameter2DataSetSubstitution"
+        eSuperTypes="#//system/AbstractDataParameterSubstitution">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="replacingDataSet" lowerBound="1"
+          eType="#//data/DataSet"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DataSetMapParameter2KeySubstitution"
+        eSuperTypes="#//system/AbstractDataParameterSubstitution">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="replacingKey" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DataParameterUsage" eSuperTypes="#//IdentifiedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requiredDataParameter"
+          lowerBound="1" eType="#//data/DataParameter"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="providedDataParameter"
+          lowerBound="1" eType="#//data/DataParameter"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="resources" nsURI="http://edu.kit.kastel.scbs.confidentiality/resources"
+      nsPrefix="edu.kit.kastel.scbs.confidentiality.resources">
+    <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//IdentifiedElement #//NamedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TamperProtection" eSuperTypes="#//IdentifiedElement #//NamedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LocationsAndTamperProtectionsPair"
+        eSuperTypes="#//IdentifiedElement #//NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="locations" lowerBound="1"
+          upperBound="-1" eType="#//resources/Location"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tamperProtections" upperBound="-1"
+          eType="#//resources/TamperProtection"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="SharingType">
+      <eLiterals name="shared"/>
+      <eLiterals name="exclusive" value="1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ConnectionType">
+      <eLiterals name="existing"/>
+      <eLiterals name="possible" value="1"/>
+      <eLiterals name="complete" value="2"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="adversary" nsURI="http://edu.kit.kastel.scbs.confidentiality/adversary"
+      nsPrefix="edu.kit.kastel.scbs.confidentiality.adversary">
+    <eClassifiers xsi:type="ecore:EClass" name="Adversaries" eSuperTypes="#//IdentifiedElement #//NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="adversaries" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//adversary/Adversary" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Adversary" eSuperTypes="#//IdentifiedElement #//NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mayKnowData" upperBound="-1"
+          eType="#//data/UnparameterizedDataIdentifying"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="locationsAndTamperProtectionsPairs"
+          upperBound="-1" eType="#//resources/LocationsAndTamperProtectionsPair"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

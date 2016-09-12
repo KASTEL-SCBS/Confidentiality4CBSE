@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="http://edu.kit.kastel.scbs.confidentiality"
+            class="edu.kit.kastel.scbs.confidentiality.ConfidentialityPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="http://edu.kit.kastel.scbs.confidentiality/data"
+            class="edu.kit.kastel.scbs.confidentiality.data.DataPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="http://edu.kit.kastel.scbs.confidentiality.repository"
+            class="edu.kit.kastel.scbs.confidentiality.repository.RepositoryPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="http://edu.kit.kastel.scbs.confidentiality.system"
+            class="edu.kit.kastel.scbs.confidentiality.system.SystemPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="http://edu.kit.kastel.scbs.confidentiality/resources"
+            class="edu.kit.kastel.scbs.confidentiality.resources.ResourcesPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated confidentiality -->
+      <package
+            uri="http://edu.kit.kastel.scbs.confidentiality/adversary"
+            class="edu.kit.kastel.scbs.confidentiality.adversary.AdversaryPackage"
+            genModel="model/confidentiality.genmodel"/>
+   </extension>
+</plugin>

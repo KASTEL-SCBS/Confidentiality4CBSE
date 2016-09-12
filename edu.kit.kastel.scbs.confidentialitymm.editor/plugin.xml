@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated confidentiality -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.kastel.scbs.confidentiality.presentation.ConfidentialityModelWizardID"
+            name="%_UI_ConfidentialityModelWizard_label"
+            class="edu.kit.kastel.scbs.confidentiality.presentation.ConfidentialityModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ConfidentialityModelFile.gif">
+         <description>%_UI_ConfidentialityModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated confidentiality -->
+      <editor
+            id="edu.kit.kastel.scbs.confidentiality.presentation.ConfidentialityEditorID"
+            name="%_UI_ConfidentialityEditor_label"
+            icon="icons/full/obj16/ConfidentialityModelFile.gif"
+            extensions="confidentiality"
+            class="edu.kit.kastel.scbs.confidentiality.presentation.ConfidentialityEditor"
+            contributorClass="edu.kit.kastel.scbs.confidentiality.presentation.ConfidentialityActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated confidentiality -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.kastel.scbs.confidentiality.data.presentation.DataModelWizardID"
+            name="%_UI_DataModelWizard_label"
+            class="edu.kit.kastel.scbs.confidentiality.data.presentation.DataModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DataModelFile.gif">
+         <description>%_UI_DataModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated confidentiality -->
+      <editor
+            id="edu.kit.kastel.scbs.confidentiality.data.presentation.DataEditorID"
+            name="%_UI_DataEditor_label"
+            icon="icons/full/obj16/DataModelFile.gif"
+            extensions="data"
+            class="edu.kit.kastel.scbs.confidentiality.data.presentation.DataEditor"
+            contributorClass="edu.kit.kastel.scbs.confidentiality.data.presentation.DataActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated confidentiality -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.kastel.scbs.confidentiality.repository.presentation.RepositoryModelWizardID"
+            name="%_UI_RepositoryModelWizard_label"
+            class="edu.kit.kastel.scbs.confidentiality.repository.presentation.RepositoryModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RepositoryModelFile.gif">
+         <description>%_UI_RepositoryModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated confidentiality -->
+      <editor
+            id="edu.kit.kastel.scbs.confidentiality.repository.presentation.RepositoryEditorID"
+            name="%_UI_RepositoryEditor_label"
+            icon="icons/full/obj16/RepositoryModelFile.gif"
+            extensions="repository"
+            class="edu.kit.kastel.scbs.confidentiality.repository.presentation.RepositoryEditor"
+            contributorClass="edu.kit.kastel.scbs.confidentiality.repository.presentation.RepositoryActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated confidentiality -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.kastel.scbs.confidentiality.system.presentation.SystemModelWizardID"
+            name="%_UI_SystemModelWizard_label"
+            class="edu.kit.kastel.scbs.confidentiality.system.presentation.SystemModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SystemModelFile.gif">
+         <description>%_UI_SystemModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated confidentiality -->
+      <editor
+            id="edu.kit.kastel.scbs.confidentiality.system.presentation.SystemEditorID"
+            name="%_UI_SystemEditor_label"
+            icon="icons/full/obj16/SystemModelFile.gif"
+            extensions="system"
+            class="edu.kit.kastel.scbs.confidentiality.system.presentation.SystemEditor"
+            contributorClass="edu.kit.kastel.scbs.confidentiality.system.presentation.SystemActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated confidentiality -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.kastel.scbs.confidentiality.resources.presentation.ResourcesModelWizardID"
+            name="%_UI_ResourcesModelWizard_label"
+            class="edu.kit.kastel.scbs.confidentiality.resources.presentation.ResourcesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ResourcesModelFile.gif">
+         <description>%_UI_ResourcesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated confidentiality -->
+      <editor
+            id="edu.kit.kastel.scbs.confidentiality.resources.presentation.ResourcesEditorID"
+            name="%_UI_ResourcesEditor_label"
+            icon="icons/full/obj16/ResourcesModelFile.gif"
+            extensions="resources"
+            class="edu.kit.kastel.scbs.confidentiality.resources.presentation.ResourcesEditor"
+            contributorClass="edu.kit.kastel.scbs.confidentiality.resources.presentation.ResourcesActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated confidentiality -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.kastel.scbs.confidentiality.adversary.presentation.AdversaryModelWizardID"
+            name="%_UI_AdversaryModelWizard_label"
+            class="edu.kit.kastel.scbs.confidentiality.adversary.presentation.AdversaryModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AdversaryModelFile.gif">
+         <description>%_UI_AdversaryModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated confidentiality -->
+      <editor
+            id="edu.kit.kastel.scbs.confidentiality.adversary.presentation.AdversaryEditorID"
+            name="%_UI_AdversaryEditor_label"
+            icon="icons/full/obj16/AdversaryModelFile.gif"
+            extensions="adversary"
+            class="edu.kit.kastel.scbs.confidentiality.adversary.presentation.AdversaryEditor"
+            contributorClass="edu.kit.kastel.scbs.confidentiality.adversary.presentation.AdversaryActionBarContributor">
+      </editor>
+   </extension>
+</plugin>
