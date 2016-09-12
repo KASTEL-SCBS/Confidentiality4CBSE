@@ -2,7 +2,7 @@
  */
 package edu.kit.kastel.scbs.confidentiality.repository.impl;
 
-import edu.kit.ipd.sdq.vitruvius.framework.util.bridges.CollectionBridge;
+import tools.vitruv.framework.util.bridges.CollectionBridge;
 import edu.kit.kastel.scbs.confidentiality.ConfidentialityPackage;
 import edu.kit.kastel.scbs.confidentiality.NamedElement;
 

@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 
-import edu.kit.ipd.sdq.vitruvius.framework.util.bridges.CollectionBridge;
+import tools.vitruv.framework.util.bridges.CollectionBridge;
 import edu.kit.kastel.scbs.confidentiality.NamedElement;
 import edu.kit.kastel.scbs.confidentiality.provider.ConfidentialityEditPlugin;
 import edu.kit.kastel.scbs.confidentiality.provider.IdentifiedElementItemProvider;
