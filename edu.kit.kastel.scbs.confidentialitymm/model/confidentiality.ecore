@@ -22,12 +22,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametersAndDataPairs"
         lowerBound="1" upperBound="-1" eType="#//repository/ParametersAndDataPair"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="addedFunctionalParameters"
-        upperBound="-1" eType="#//repository/AddedFunctionalParameter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataParameterSubstitutions"
-        upperBound="-1" eType="#//system/AbstractDataParameterSubstitution" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataParameterUsages" upperBound="-1"
-        eType="#//system/DataParameterUsage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="addedServiceParameters"
+        upperBound="-1" eType="#//repository/AddedServiceParameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specificationParameterAssignments"
+        upperBound="-1" eType="#//system/AbstractSpecificationParameterAssignment"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specificationParameterEquations"
+        upperBound="-1" eType="#//system/SpecificationParameterEquation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="locations" lowerBound="1"
         upperBound="-1" eType="#//resources/Location" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tamperProtections" upperBound="-1"
@@ -46,8 +47,8 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="specificationContainer"
           lowerBound="1" eType="#//ConfidentialitySpecification" eOpposite="#//ConfidentialitySpecification/dataSetMaps"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DataParameter" eSuperTypes="#//data/DataIdentifying #//NamedElement">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="definingFunctionalParameter"
+    <eClassifiers xsi:type="ecore:EClass" name="SpecificationParameter" eSuperTypes="#//data/DataIdentifying #//NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="definingServiceParameter"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AbstractDataSetMapEntry" abstract="true"
@@ -57,7 +58,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="DataSetMapEntry" eSuperTypes="#//data/AbstractDataSetMapEntry #//data/UnparameterizedDataIdentifying #//NamedElement"/>
     <eClassifiers xsi:type="ecore:EClass" name="ParameterizedDataSetMapEntry" eSuperTypes="#//data/AbstractDataSetMapEntry">
       <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
-          eType="#//data/DataParameter"/>
+          eType="#//data/SpecificationParameter"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="repository" nsURI="http://edu.kit.kastel.scbs.confidentiality.repository"
@@ -68,30 +69,30 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="dataTargets" lowerBound="1"
           upperBound="-1" eType="#//data/DataIdentifying"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="AddedFunctionalParameter" eSuperTypes="#//IdentifiedElement #//NamedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="AddedServiceParameter" eSuperTypes="#//IdentifiedElement #//NamedElement"/>
   </eSubpackages>
   <eSubpackages name="system" nsURI="http://edu.kit.kastel.scbs.confidentiality.system"
       nsPrefix="edu.kit.kastel.scbs.confidentiality.system">
-    <eClassifiers xsi:type="ecore:EClass" name="AbstractDataParameterSubstitution"
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractSpecificationParameterAssignment"
         abstract="true" eSuperTypes="#//IdentifiedElement">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="dataParametersToReplace"
-          lowerBound="1" upperBound="-1" eType="#//data/DataParameter"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="specificationParametersToReplace"
+          lowerBound="1" upperBound="-1" eType="#//data/SpecificationParameter"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DataParameter2DataSetSubstitution"
-        eSuperTypes="#//system/AbstractDataParameterSubstitution">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="replacingDataSet" lowerBound="1"
+    <eClassifiers xsi:type="ecore:EClass" name="SpecificationParameter2DataSetAssignment"
+        eSuperTypes="#//system/AbstractSpecificationParameterAssignment">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assignedDataSet" lowerBound="1"
           eType="#//data/DataSet"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DataSetMapParameter2KeySubstitution"
-        eSuperTypes="#//system/AbstractDataParameterSubstitution">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="replacingKey" lowerBound="1"
+    <eClassifiers xsi:type="ecore:EClass" name="DataSetMapParameter2KeyAssignment"
+        eSuperTypes="#//system/AbstractSpecificationParameterAssignment">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="assignedKey" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DataParameterUsage" eSuperTypes="#//IdentifiedElement">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="requiredDataParameter"
-          lowerBound="1" eType="#//data/DataParameter"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="providedDataParameter"
-          lowerBound="1" eType="#//data/DataParameter"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SpecificationParameterEquation" eSuperTypes="#//IdentifiedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requiredSpecificationParameter"
+          lowerBound="1" eType="#//data/SpecificationParameter"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="providedSpecificationParameter"
+          lowerBound="1" eType="#//data/SpecificationParameter"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="resources" nsURI="http://edu.kit.kastel.scbs.confidentiality/resources"
