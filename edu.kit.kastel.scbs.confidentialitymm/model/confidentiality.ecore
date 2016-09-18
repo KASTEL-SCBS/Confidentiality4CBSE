@@ -89,10 +89,14 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SpecificationParameterEquation" eSuperTypes="#//IdentifiedElement">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="requiredSpecificationParameter"
-          lowerBound="1" eType="#//data/SpecificationParameter"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="providedSpecificationParameter"
           lowerBound="1" eType="#//data/SpecificationParameter"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="providedInterfaceNames"
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requiredSpecificationParameter"
+          lowerBound="1" eType="#//data/SpecificationParameter"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredInterfaceNames"
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="resources" nsURI="http://edu.kit.kastel.scbs.confidentiality/resources"

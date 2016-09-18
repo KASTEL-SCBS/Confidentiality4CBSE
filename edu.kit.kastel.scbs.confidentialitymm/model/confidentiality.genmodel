@@ -71,9 +71,11 @@
       </genClasses>
       <genClasses ecoreClass="confidentiality.ecore#//system/SpecificationParameterEquation">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference confidentiality.ecore#//system/SpecificationParameterEquation/requiredSpecificationParameter"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference confidentiality.ecore#//system/SpecificationParameterEquation/providedSpecificationParameter"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confidentiality.ecore#//system/SpecificationParameterEquation/providedInterfaceNames"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confidentiality.ecore#//system/SpecificationParameterEquation/requiredSpecificationParameter"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confidentiality.ecore#//system/SpecificationParameterEquation/requiredInterfaceNames"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Resources" basePackage="edu.kit.kastel.scbs.confidentiality"

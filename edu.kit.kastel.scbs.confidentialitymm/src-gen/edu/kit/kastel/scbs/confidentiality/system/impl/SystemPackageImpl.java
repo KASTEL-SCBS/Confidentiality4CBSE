@@ -218,7 +218,16 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * @generated
 	 */
 	public EReference getSpecificationParameterEquation_RequiredSpecificationParameter() {
-		return (EReference)specificationParameterEquationEClass.getEStructuralFeatures().get(0);
+		return (EReference)specificationParameterEquationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSpecificationParameterEquation_RequiredInterfaceNames() {
+		return (EAttribute)specificationParameterEquationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -227,7 +236,16 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * @generated
 	 */
 	public EReference getSpecificationParameterEquation_ProvidedSpecificationParameter() {
-		return (EReference)specificationParameterEquationEClass.getEStructuralFeatures().get(1);
+		return (EReference)specificationParameterEquationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSpecificationParameterEquation_ProvidedInterfaceNames() {
+		return (EAttribute)specificationParameterEquationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -268,8 +286,10 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 		createEAttribute(dataSetMapParameter2KeyAssignmentEClass, DATA_SET_MAP_PARAMETER2_KEY_ASSIGNMENT__ASSIGNED_KEY);
 
 		specificationParameterEquationEClass = createEClass(SPECIFICATION_PARAMETER_EQUATION);
-		createEReference(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER);
 		createEReference(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER);
+		createEAttribute(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES);
+		createEReference(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER);
+		createEAttribute(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES);
 	}
 
 	/**
@@ -320,8 +340,10 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 		initEAttribute(getDataSetMapParameter2KeyAssignment_AssignedKey(), ecorePackage.getEString(), "assignedKey", null, 1, 1, DataSetMapParameter2KeyAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(specificationParameterEquationEClass, SpecificationParameterEquation.class, "SpecificationParameterEquation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSpecificationParameterEquation_RequiredSpecificationParameter(), theDataPackage.getSpecificationParameter(), null, "requiredSpecificationParameter", null, 1, 1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationParameterEquation_ProvidedSpecificationParameter(), theDataPackage.getSpecificationParameter(), null, "providedSpecificationParameter", null, 1, 1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSpecificationParameterEquation_ProvidedInterfaceNames(), ecorePackage.getEString(), "providedInterfaceNames", null, 0, -1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecificationParameterEquation_RequiredSpecificationParameter(), theDataPackage.getSpecificationParameter(), null, "requiredSpecificationParameter", null, 1, 1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSpecificationParameterEquation_RequiredInterfaceNames(), ecorePackage.getEString(), "requiredInterfaceNames", null, 0, -1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //SystemPackageImpl

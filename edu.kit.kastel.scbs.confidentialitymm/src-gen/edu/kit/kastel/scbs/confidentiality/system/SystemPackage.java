@@ -234,22 +234,40 @@ public interface SystemPackage extends EPackage {
 	int SPECIFICATION_PARAMETER_EQUATION__ID = ConfidentialityPackage.IDENTIFIED_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Required Specification Parameter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Provided Specification Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Provided Interface Names</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Required Specification Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Required Interface Names</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Specification Parameter Equation</em>' class.
@@ -258,7 +276,7 @@ public interface SystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_PARAMETER_EQUATION_FEATURE_COUNT = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+	int SPECIFICATION_PARAMETER_EQUATION_FEATURE_COUNT = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Specification Parameter Equation</em>' class.
@@ -355,6 +373,17 @@ public interface SystemPackage extends EPackage {
 	EReference getSpecificationParameterEquation_RequiredSpecificationParameter();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRequiredInterfaceNames <em>Required Interface Names</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Required Interface Names</em>'.
+	 * @see edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRequiredInterfaceNames()
+	 * @see #getSpecificationParameterEquation()
+	 * @generated
+	 */
+	EAttribute getSpecificationParameterEquation_RequiredInterfaceNames();
+
+	/**
 	 * Returns the meta object for the reference '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getProvidedSpecificationParameter <em>Provided Specification Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -364,6 +393,17 @@ public interface SystemPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSpecificationParameterEquation_ProvidedSpecificationParameter();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getProvidedInterfaceNames <em>Provided Interface Names</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Provided Interface Names</em>'.
+	 * @see edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getProvidedInterfaceNames()
+	 * @see #getSpecificationParameterEquation()
+	 * @generated
+	 */
+	EAttribute getSpecificationParameterEquation_ProvidedInterfaceNames();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -461,12 +501,28 @@ public interface SystemPackage extends EPackage {
 		EReference SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER = eINSTANCE.getSpecificationParameterEquation_RequiredSpecificationParameter();
 
 		/**
+		 * The meta object literal for the '<em><b>Required Interface Names</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES = eINSTANCE.getSpecificationParameterEquation_RequiredInterfaceNames();
+
+		/**
 		 * The meta object literal for the '<em><b>Provided Specification Parameter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER = eINSTANCE.getSpecificationParameterEquation_ProvidedSpecificationParameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Provided Interface Names</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES = eINSTANCE.getSpecificationParameterEquation_ProvidedInterfaceNames();
 
 	}
 

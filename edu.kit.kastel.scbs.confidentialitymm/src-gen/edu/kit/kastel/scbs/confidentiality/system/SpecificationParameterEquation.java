@@ -5,6 +5,7 @@ package edu.kit.kastel.scbs.confidentiality.system;
 import edu.kit.kastel.scbs.confidentiality.IdentifiedElement;
 
 import edu.kit.kastel.scbs.confidentiality.data.SpecificationParameter;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,8 +16,10 @@ import edu.kit.kastel.scbs.confidentiality.data.SpecificationParameter;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRequiredSpecificationParameter <em>Required Specification Parameter</em>}</li>
  *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getProvidedSpecificationParameter <em>Provided Specification Parameter</em>}</li>
+ *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getProvidedInterfaceNames <em>Provided Interface Names</em>}</li>
+ *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRequiredSpecificationParameter <em>Required Specification Parameter</em>}</li>
+ *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRequiredInterfaceNames <em>Required Interface Names</em>}</li>
  * </ul>
  *
  * @see edu.kit.kastel.scbs.confidentiality.system.SystemPackage#getSpecificationParameterEquation()
@@ -51,6 +54,22 @@ public interface SpecificationParameterEquation extends IdentifiedElement {
 	void setRequiredSpecificationParameter(SpecificationParameter value);
 
 	/**
+	 * Returns the value of the '<em><b>Required Interface Names</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Required Interface Names</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Required Interface Names</em>' attribute list.
+	 * @see edu.kit.kastel.scbs.confidentiality.system.SystemPackage#getSpecificationParameterEquation_RequiredInterfaceNames()
+	 * @model
+	 * @generated
+	 */
+	EList<String> getRequiredInterfaceNames();
+
+	/**
 	 * Returns the value of the '<em><b>Provided Specification Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -75,5 +94,21 @@ public interface SpecificationParameterEquation extends IdentifiedElement {
 	 * @generated
 	 */
 	void setProvidedSpecificationParameter(SpecificationParameter value);
+
+	/**
+	 * Returns the value of the '<em><b>Provided Interface Names</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Provided Interface Names</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Provided Interface Names</em>' attribute list.
+	 * @see edu.kit.kastel.scbs.confidentiality.system.SystemPackage#getSpecificationParameterEquation_ProvidedInterfaceNames()
+	 * @model
+	 * @generated
+	 */
+	EList<String> getProvidedInterfaceNames();
 
 } // SpecificationParameterEquation
