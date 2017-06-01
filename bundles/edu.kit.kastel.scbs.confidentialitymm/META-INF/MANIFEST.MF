@@ -28,7 +28,6 @@ Export-Package: edu.kit.kastel.scbs.confidentiality,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.ocl.pivot;visibility:=reexport,
- org.eclipse.ocl.examples.codegen;visibility:=reexport,
  tools.vitruv.framework.util,
  org.eclipse.xtext.xbase;bundle-version="2.9.0",
  org.eclipse.xtext.xbase.lib
