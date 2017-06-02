@@ -1,4 +1,4 @@
-package edu.kit.kastel.scbs.pcm2java4KeY.informationflow.annotation
+package edu.kit.kastel.scbs.confidentialityannotations
 
 import java.lang.annotation.ElementType
 import java.lang.annotation.Retention
@@ -9,5 +9,6 @@ import java.lang.annotation.Target
 @Target(ElementType.METHOD, ElementType.TYPE)
 annotation InformationFlow {
 	String[] parameterSources
-	DataIdentifying[] dataTargets
+	DataSets[] dataSets
+	DataSetMapEntries[] dataSetMapEntries
 }
