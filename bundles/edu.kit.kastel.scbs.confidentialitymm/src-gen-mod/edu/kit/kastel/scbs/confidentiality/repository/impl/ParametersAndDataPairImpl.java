@@ -2,30 +2,24 @@
  */
 package edu.kit.kastel.scbs.confidentiality.repository.impl;
 
-import tools.vitruv.framework.util.bridges.CollectionBridge;
-import edu.kit.kastel.scbs.confidentiality.ConfidentialityPackage;
-import edu.kit.kastel.scbs.confidentiality.NamedElement;
-
-import edu.kit.kastel.scbs.confidentiality.data.DataIdentifying;
-import edu.kit.kastel.scbs.confidentiality.data.ParameterizedDataSetMapEntry;
-import edu.kit.kastel.scbs.confidentiality.impl.IdentifiedElementImpl;
-
-import edu.kit.kastel.scbs.confidentiality.repository.ParametersAndDataPair;
-import edu.kit.kastel.scbs.confidentiality.repository.RepositoryPackage;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
+
+import edu.kit.kastel.scbs.confidentiality.ConfidentialityPackage;
+import edu.kit.kastel.scbs.confidentiality.NamedElement;
+import edu.kit.kastel.scbs.confidentiality.data.DataIdentifying;
+import edu.kit.kastel.scbs.confidentiality.data.ParameterizedDataSetMapEntry;
+import edu.kit.kastel.scbs.confidentiality.impl.IdentifiedElementImpl;
+import edu.kit.kastel.scbs.confidentiality.repository.ParametersAndDataPair;
+import edu.kit.kastel.scbs.confidentiality.repository.RepositoryPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -125,7 +119,7 @@ public class ParametersAndDataPairImpl extends IdentifiedElementImpl implements 
 			String label = "p=";
 			label += getParameterSources();
 			label += " - d=[";
-			label += CollectionBridge.toStringWithSeparator(getDataTargets(), ", ", toName);
+			label += IterableExtensions.join(getDataTargets(), ", ", toName);
 			label += "]";
 			return label;
 		}

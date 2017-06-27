@@ -2,7 +2,6 @@
  */
 package edu.kit.kastel.scbs.confidentiality.resources.impl;
 
-import tools.vitruv.framework.util.bridges.CollectionBridge;
 import edu.kit.kastel.scbs.confidentiality.ConfidentialityPackage;
 import edu.kit.kastel.scbs.confidentiality.NamedElement;
 
@@ -24,6 +23,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 
 /**
@@ -115,9 +115,9 @@ public class LocationsAndTamperProtectionsPairImpl extends IdentifiedElementImpl
 				}
 			};
 			String label = "l=[";
-			label += CollectionBridge.toStringWithSeparator(getLocations(), ", ", toName);
+			label += IterableExtensions.join(getLocations(), ", ", toName);
 			label += "] - t=[";
-			label += CollectionBridge.toStringWithSeparator(getTamperProtections(), ", ", toName);
+			label += IterableExtensions.join(getTamperProtections(), ", ", toName);
 			label += "]";
 			return label;
 		}

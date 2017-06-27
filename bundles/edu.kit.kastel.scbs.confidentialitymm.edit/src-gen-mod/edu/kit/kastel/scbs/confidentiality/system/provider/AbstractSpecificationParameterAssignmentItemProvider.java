@@ -12,8 +12,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
-import tools.vitruv.framework.util.bridges.CollectionBridge;
 import edu.kit.kastel.scbs.confidentiality.NamedElement;
 import edu.kit.kastel.scbs.confidentiality.provider.ConfidentialityEditPlugin;
 import edu.kit.kastel.scbs.confidentiality.provider.IdentifiedElementItemProvider;
@@ -102,7 +102,7 @@ public class AbstractSpecificationParameterAssignmentItemProvider extends Identi
 			}
 		};
 		String label = "";
-		label += CollectionBridge.toStringWithSeparator(adps.getSpecificationParametersToReplace(), ", ", toName);
+		label += IterableExtensions.join(adps.getSpecificationParametersToReplace(), ", ", toName);
 		label += " <- ";
 		return label;
 	}
