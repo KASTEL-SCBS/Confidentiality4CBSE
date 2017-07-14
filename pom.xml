@@ -12,5 +12,6 @@
   <modules>
     <module>releng/edu.kit.kastel.scbs.confidentiality.aggregator</module>
     <module>releng/edu.kit.kastel.scbs.confidentiality.updatesite</module>
+    <module>releng/edu.kit.kastel.scbs.confidentiality.updatesite.aggregated</module>
   </modules>
 </project>
