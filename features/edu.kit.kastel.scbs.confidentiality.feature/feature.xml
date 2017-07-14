@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="edu.kit.kastel.scbs.confidentiality.feature"
+      label="confidentiality"
+      version="1.0.0.qualifier"
+      provider-name="SDQ">
+   <description url="https://github.com/KASTEL-SCBS/Confidentiality4CBSE">
+      Specify confidentiality during component-based software engineering
+   </description>
+   <copyright url="http://www.example.com/copyright">
+      [TODO Enter Copyright Description here.]
+   </copyright>
+   <license url="http://www.example.com/license">
+      [TODO Enter License Description here.]
+   </license>
+   <requires>
+      <!--<import plugin="org.eclipse.ocl.pivot"/>-->
+      <import feature="org.eclipse.xtend.sdk.feature.group" version="2.10.0" match="greaterOrEqual"/>
+      <import feature="org.modelversioning.emfprofile.feature.feature.group" version="1.1.0" match="greaterOrEqual"/>
+   </requires>
+   <plugin
+         id="edu.kit.kastel.scbs.confidentialitymm"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+  <plugin
+      id="edu.kit.kastel.scbs.confidentialitymm.edit"
+      download-size="0"
+      install-size="0"
+      version="0.0.0"
+      unpack="false"/>
+  <plugin
+      id="edu.kit.kastel.scbs.confidentialitymm.editor"
+      download-size="0"
+      install-size="0"
+      version="0.0.0"
+      unpack="false"/>
+  <plugin
+      id="edu.kit.kastel.scbs.pcmconfidentialityprofile"
+      download-size="0"
+      install-size="0"
+      version="0.0.0"
+      unpack="false"/>
+</feature>

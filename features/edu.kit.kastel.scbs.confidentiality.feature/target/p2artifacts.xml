@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='2'>
+  <artifact classifier='org.eclipse.update.feature' id='edu.kit.kastel.scbs.confidentiality.feature' version='1.0.0.201707140848'>
+    <properties size='6'>
+      <property name='artifact.size' value='910'/>
+      <property name='download.size' value='910'/>
+      <property name='maven-groupId' value='edu.kit.kastel.scbs.confidentiality'/>
+      <property name='maven-artifactId' value='edu.kit.kastel.scbs.confidentiality.feature'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      <property name='download.contentType' value='application/zip'/>
+    </properties>
+  </artifact>
+  <artifact classifier='org.eclipse.update.feature' id='edu.kit.kastel.scbs.confidentiality.feature.source' version='1.0.0.201707140848'>
+    <properties size='7'>
+      <property name='artifact.size' value='2625'/>
+      <property name='download.size' value='2625'/>
+      <property name='maven-groupId' value='edu.kit.kastel.scbs.confidentiality'/>
+      <property name='maven-artifactId' value='edu.kit.kastel.scbs.confidentiality.feature'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      <property name='maven-classifier' value='sources-feature'/>
+      <property name='download.contentType' value='application/zip'/>
+    </properties>
+  </artifact>
+</artifacts>

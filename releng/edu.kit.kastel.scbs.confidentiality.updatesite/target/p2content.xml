@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='201707140848.confidentiality' version='1.0.0.2--cJIZT07735G3G5A3IAI'>
+    <properties size='3'>
+      <property name='org.eclipse.equinox.p2.name' value='confidentiality'/>
+      <property name='org.eclipse.equinox.p2.description' value='Specify confidentiality during component-based software engineering'/>
+      <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='201707140848.confidentiality' version='1.0.0.2--cJIZT07735G3G5A3IAI'/>
+    </provides>
+    <requires size='1'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='edu.kit.kastel.scbs.confidentiality.feature.feature.group' range='[1.0.0.201707140848,1.0.0.201707140848]'/>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+  </unit>
+</units>
