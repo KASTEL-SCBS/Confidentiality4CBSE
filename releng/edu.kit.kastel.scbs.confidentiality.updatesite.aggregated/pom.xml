@@ -4,9 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>edu.kit.kastel.scbs.confidentiality</groupId>
-		<artifactId>releng</artifactId>
+		<artifactId>parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
-		<relativePath>../</relativePath>
+		<relativePath>../edu.kit.kastel.scbs.confidentiality.parent</relativePath>
 	</parent>
 	<artifactId>edu.kit.kastel.scbs.confidentiality.updatesite.aggregated</artifactId>
 	<packaging>pom</packaging>
