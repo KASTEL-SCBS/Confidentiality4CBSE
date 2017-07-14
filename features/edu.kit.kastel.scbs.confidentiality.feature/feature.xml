@@ -15,8 +15,8 @@
    </license>
    <requires>
       <!--<import plugin="org.eclipse.ocl.pivot"/>-->
-      <import feature="org.eclipse.xtend.sdk.feature.group" version="2.10.0" match="greaterOrEqual"/>
-      <import feature="org.modelversioning.emfprofile.feature.feature.group" version="1.1.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.xtend.sdk" version="2.10.0" match="greaterOrEqual"/>
+      <import feature="org.modelversioning.emfprofile.feature" version="1.0.0" match="greaterOrEqual"/>
    </requires>
    <plugin
          id="edu.kit.kastel.scbs.confidentialitymm"
