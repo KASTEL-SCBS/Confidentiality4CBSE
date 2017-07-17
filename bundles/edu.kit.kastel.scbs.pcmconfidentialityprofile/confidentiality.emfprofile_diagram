@@ -7,7 +7,7 @@
         <eType xmi:type="ecore:EEnum" href="http://edu.kit.kastel.scbs.confidentiality#//resources/SharingType"/>
       </eStructuralFeatures>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_vvbR8IOkEeW0_uLqifoM5g" lowerBound="1">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//resourceenvironment/ResourceContainer"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment/ResourceContainer"/>
       </extensions>
     </eClassifiers>
     <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_QWB4EIOiEeW0_uLqifoM5g" name="FurtherPhysicalConnections">
@@ -16,7 +16,7 @@
         <eType xmi:type="ecore:EEnum" href="http://edu.kit.kastel.scbs.confidentiality#//resources/ConnectionType"/>
       </eStructuralFeatures>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_zSr9UIOkEeW0_uLqifoM5g" lowerBound="1">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//resourceenvironment/ResourceContainer"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment/ResourceContainer"/>
       </extensions>
     </eClassifiers>
     <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_UUre8IOiEeW0_uLqifoM5g" name="LocationAndTamperProtection">
@@ -25,10 +25,10 @@
         <eType xmi:type="ecore:EClass" href="http://edu.kit.kastel.scbs.confidentiality#//resources/LocationsAndTamperProtectionsPair"/>
       </eStructuralFeatures>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_1rCUwIOkEeW0_uLqifoM5g">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//resourceenvironment/ResourceContainer"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment/ResourceContainer"/>
       </extensions>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_58XAAIOkEeW0_uLqifoM5g">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//resourceenvironment/LinkingResource"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment/LinkingResource"/>
       </extensions>
     </eClassifiers>
     <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_VoaXsIOiEeW0_uLqifoM5g" name="Encryption">
@@ -37,7 +37,7 @@
         <eType xmi:type="ecore:EClass" href="http://edu.kit.kastel.scbs.confidentiality#//data/DataIdentifying"/>
       </eStructuralFeatures>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_7R9hAIOkEeW0_uLqifoM5g" lowerBound="1">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//resourceenvironment/LinkingResource"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment/LinkingResource"/>
       </extensions>
     </eClassifiers>
     <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_mcPPUIOkEeW0_uLqifoM5g" name="InformationFlow">
@@ -46,10 +46,10 @@
         <eType xmi:type="ecore:EClass" href="http://edu.kit.kastel.scbs.confidentiality#//repository/ParametersAndDataPair"/>
       </eStructuralFeatures>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_g1JGUJnREeWvVMHOHv3ROA">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//repository/Signature"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/Signature"/>
       </extensions>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_awKrQOtWEeW_qrl1HgOu8w">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//repository/Interface"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/Interface"/>
       </extensions>
     </eClassifiers>
     <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_USPaQBazEeaeOoAHsokBDw" name="InformationFlowParameterAssignment">
@@ -58,7 +58,7 @@
         <eType xmi:type="ecore:EClass" href="http://edu.kit.kastel.scbs.confidentiality#//system/AbstractSpecificationParameterAssignment"/>
       </eStructuralFeatures>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_qdCogBazEeaeOoAHsokBDw" lowerBound="1">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//core/composition/Connector"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//core/composition/Connector"/>
       </extensions>
     </eClassifiers>
     <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_4AaswDF0EeaZ1ISuff6-rA" name="InformationFlowParameter">
@@ -67,10 +67,10 @@
         <eType xmi:type="ecore:EClass" href="http://edu.kit.kastel.scbs.confidentiality#//data/SpecificationParameter"/>
       </eStructuralFeatures>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_WP5jIDF1EeaZ1ISuff6-rA">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//repository/Interface"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/Interface"/>
       </extensions>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_frmBgDF1EeaZ1ISuff6-rA">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//repository/Signature"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/Signature"/>
       </extensions>
     </eClassifiers>
     <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_GKeCUDSDEea1oovLYTqiDg" name="ServiceParameterAddition">
@@ -79,10 +79,10 @@
         <eType xmi:type="ecore:EClass" href="http://edu.kit.kastel.scbs.confidentiality#//repository/AddedServiceParameter"/>
       </eStructuralFeatures>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_TyxrEDSDEea1oovLYTqiDg">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//repository/Signature"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/Signature"/>
       </extensions>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_mbJUYDSDEea1oovLYTqiDg">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//repository/Interface"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/Interface"/>
       </extensions>
     </eClassifiers>
     <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_5BI-oG3oEeaJktYWeUvT7A" name="InformationFlowParameterEquation">
@@ -91,7 +91,7 @@
         <eType xmi:type="ecore:EClass" href="http://edu.kit.kastel.scbs.confidentiality#//system/SpecificationParameterEquation"/>
       </eStructuralFeatures>
       <extensions xmi:type="emfprofile:Extension" xmi:id="__9YYAG3oEeaJktYWeUvT7A" lowerBound="1">
-        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//core/composition/AssemblyContext"/>
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//core/composition/AssemblyContext"/>
       </extensions>
     </eClassifiers>
   </emfprofile:Profile>
@@ -157,7 +157,7 @@
       </children>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_Un9aoYLOEeWO3OUvsofcKg"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_Un9aooLOEeWO3OUvsofcKg" fontName="Ubuntu"/>
-      <element xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//resourceenvironment/ResourceContainer"/>
+      <element xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment/ResourceContainer"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Un9ao4LOEeWO3OUvsofcKg" x="275" y="80" width="138"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_Y0klAILOEeWO3OUvsofcKg" type="2002">
@@ -175,7 +175,7 @@
       </children>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_Y0klAYLOEeWO3OUvsofcKg"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_Y0klAoLOEeWO3OUvsofcKg" fontName="Ubuntu"/>
-      <element xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//resourceenvironment/LinkingResource"/>
+      <element xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment/LinkingResource"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y0klA4LOEeWO3OUvsofcKg" x="730" y="80" width="123"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_c6f4kILOEeWO3OUvsofcKg" type="2002">
@@ -193,7 +193,7 @@
       </children>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_c6f4kYLOEeWO3OUvsofcKg"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_c6f4koLOEeWO3OUvsofcKg" fontName="Ubuntu"/>
-      <element xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//repository/Signature"/>
+      <element xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/Signature"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c6f4k4LOEeWO3OUvsofcKg" x="650" y="450"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_Pli2UIOiEeW0_uLqifoM5g" type="2006" element="_PknCMIOiEeW0_uLqifoM5g">
@@ -303,7 +303,7 @@
       </children>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_Y_948etWEeW_qrl1HgOu8w"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_Y_948utWEeW_qrl1HgOu8w" fontName="Ubuntu"/>
-      <element xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//repository/Interface"/>
+      <element xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/Interface"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y_948-tWEeW_qrl1HgOu8w" x="250" y="525"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_KXBuUBazEeaeOoAHsokBDw" type="2002">
@@ -321,7 +321,7 @@
       </children>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_KXBuURazEeaeOoAHsokBDw"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_KXBuUhazEeaeOoAHsokBDw" fontName="Ubuntu"/>
-      <element xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//core/composition/Connector"/>
+      <element xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//core/composition/Connector"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KXBuUxazEeaeOoAHsokBDw" x="855" y="470"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_PsuAoBazEeaeOoAHsokBDw" type="2002">
@@ -443,7 +443,7 @@
       </children>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_3fsaAW3oEeaJktYWeUvT7A"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_3fsaAm3oEeaJktYWeUvT7A" fontName="Ubuntu"/>
-      <element xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.1#//core/composition/AssemblyContext"/>
+      <element xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//core/composition/AssemblyContext"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3fsaA23oEeaJktYWeUvT7A" x="295" y="350" width="125"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_5BKMwG3oEeaJktYWeUvT7A" type="2006" element="_5BI-oG3oEeaJktYWeUvT7A">
