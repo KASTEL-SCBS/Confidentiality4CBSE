@@ -15,8 +15,12 @@
    </license>
    <requires>
       <!--<import plugin="org.eclipse.ocl.pivot"/>-->
-      <import feature="org.eclipse.xtend.sdk" version="2.10.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.xtend.source"/>
+      <import feature="edu.kit.ipd.sdq.commons.util.java.feature.source" version="1.0.0" match="greaterOrEqual"/>
+      <import feature="edu.kit.ipd.sdq.commons.util.mdsdprofiles.feature.source" version="1.0.0" match="greaterOrEqual"/>
       <import feature="org.modelversioning.emfprofile.feature" version="1.0.0" match="greaterOrEqual"/>
+      <import feature="de.uka.ipd.sdq.identifier.source.feature" version="2.1.0" match="greaterOrEqual"/>
+      <import feature="org.palladiosimulator.pcm.source.feature" version="4.0.1" match="greaterOrEqual"/>
    </requires>
    <plugin
          id="edu.kit.kastel.scbs.confidentialitymm"
