@@ -19,12 +19,12 @@
     <repository>
       <id>eclipse</id>
       <layout>p2</layout>
-      <url>http://download.eclipse.org/releases/oxygen</url>
+      <url>http://sdqbuild.ipd.kit.edu/nexus/content/groups/eclipse-oxygen-complete</url>
     </repository>
     <repository>
       <id>SDQ Commons</id>
       <layout>p2</layout>
-      <url>https://kit-sdq.github.io/updatesite/nightly/commons</url>
+      <url>https://sdqbuild.ipd.kit.edu/nexus/content/repositories/kit-sdq-nightly/commons</url>
     </repository>
     <repository>
       <id>EMF Profiles</id>
@@ -34,7 +34,7 @@
     <repository>
       <id>Palladio</id>
       <layout>p2</layout>
-      <url>https://sdqweb.ipd.kit.edu/eclipse/palladiosimulator/nightly/aggregate</url>
+      <url>https://sdqbuild.ipd.kit.edu/nexus/content/repositories/palladiosimulator-nightly</url>
     </repository>
   </repositories>
   <build>

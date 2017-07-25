@@ -5,17 +5,17 @@
       <repositories location="../edu.kit.kastel.scbs.confidentiality.updatesite/target/repository"/>
     </contributions>
     <contributions label="externals">
-      <repositories location="http://download.eclipse.org/releases/oxygen/" mirrorArtifacts="false">
+      <repositories location="http://sdqbuild.ipd.kit.edu/nexus/content/groups/eclipse-oxygen-complete/" mirrorArtifacts="false">
         <features name="org.eclipse.xtend.sdk.feature.group" versionRange="2.10.0"/>
       </repositories>
-      <repositories location="https://kit-sdq.github.io/updatesite/nightly/commons" mirrorArtifacts="false">
+      <repositories location="https://sdqbuild.ipd.kit.edu/nexus/content/repositories/kit-sdq-nightly/commons" mirrorArtifacts="false">
 	<features name="edu.kit.ipd.sdq.commons.util.java.feature.source.feature.group" versionRange="[1.0.0,2.0.0)"/>
 	<features name="edu.kit.ipd.sdq.commons.util.mdsdprofiles.feature.source.feature.group" versionRange="[1.0.0,2.0.0)"/>
       </repositories>
       <repositories location="http://www.modelversioning.org/emf-profiles-updatesite" mirrorArtifacts="false">
 	<features name="org.modelversioning.emfprofile.feature.feature.group" versionRange="[1.0.0,2.0.0)"/>
       </repositories>
-      <repositories location="https://sdqweb.ipd.kit.edu/eclipse/palladiosimulator/nightly/aggregate" mirrorArtifacts="false">
+      <repositories location="https://sdqbuild.ipd.kit.edu/nexus/content/repositories/palladiosimulator-nightly" mirrorArtifacts="false">
         <features name="de.uka.ipd.sdq.identifier.source.feature.feature.group" versionRange="2.1.0"/>
         <features name="org.palladiosimulator.pcm.source.feature.feature.group" versionRange="4.0.1"/>
       </repositories>
