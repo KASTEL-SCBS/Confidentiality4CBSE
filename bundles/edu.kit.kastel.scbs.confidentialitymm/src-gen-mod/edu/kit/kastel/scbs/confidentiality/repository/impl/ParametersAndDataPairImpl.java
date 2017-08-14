@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.eclipse.xtext.xbase.lib.StringExtensions;
+
 
 import edu.kit.kastel.scbs.confidentiality.ConfidentialityPackage;
 import edu.kit.kastel.scbs.confidentiality.NamedElement;
@@ -116,12 +118,36 @@ public class ParametersAndDataPairImpl extends IdentifiedElementImpl implements 
 					}
 				}
 			};
-			String label = "p=";
-			label += getParameterSources();
-			label += " - d=[";
-			label += IterableExtensions.join(getDataTargets(), ", ", toName);
-			label += "]";
-			return label;
+			String label = "";
+			for (String parameterSource : getParameterSources()) {
+				if (parameterSource.length() > 0) {
+					switch (parameterSource.charAt(0)) {
+					case '\\':	String substringOne = "";
+								String substringTwo = "";
+								boolean pastPoint = false;
+								for (int i = 1; i < parameterSource.length(); i++) {
+									char c = parameterSource.charAt(i);
+									if (c == '.') pastPoint = true;
+									if (pastPoint) substringTwo += c;
+									else substringOne += c;
+								}
+								label += substringOne.toUpperCase() + substringTwo.toLowerCase();
+								break;
+					case '*': label += "STAR";
+							  break;
+					default: label += parameterSource.substring(0, 1).toUpperCase() + parameterSource.substring(1).toLowerCase();
+
+					}
+				}
+			}
+			label += "2";
+			for (DataIdentifying dataTarget : getDataTargets()) {
+				String dataTargetName = getName(dataTarget);
+				if (dataTargetName.length() > 0) {
+					label += dataTargetName.substring(0, 1).toUpperCase() + dataTargetName.substring(1).toLowerCase();
+				}
+			}
+			return label.replace(".", "").replace("[*]", "ALL");
 		}
 		return this.name;
 	}
@@ -292,5 +318,17 @@ public class ParametersAndDataPairImpl extends IdentifiedElementImpl implements 
 		result.append(')');
 		return result.toString();
 	}
+	
+	public String getName(DataIdentifying dataIdentifying) {
+		if (dataIdentifying instanceof NamedElement) {
+			return ((NamedElement) dataIdentifying).getName();
+		} else if (dataIdentifying instanceof ParameterizedDataSetMapEntry) {
+			ParameterizedDataSetMapEntry pdsmE = ((ParameterizedDataSetMapEntry) dataIdentifying);
+			return 	StringExtensions.toFirstUpper(pdsmE.getMap().getName().toLowerCase()) + StringExtensions.toFirstUpper(pdsmE.getParameter().getName().toLowerCase());
+		} else {
+			return "";
+		}
+	}
+	
 
 } //ParametersAndDataPairImpl
