@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.palladiosimulator.pcm.PcmPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -116,6 +117,9 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 		SystemPackageImpl theSystemPackage = (SystemPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof SystemPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new SystemPackageImpl());
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		PcmPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		ConfidentialityPackageImpl theConfidentialityPackage = (ConfidentialityPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ConfidentialityPackage.eNS_URI) instanceof ConfidentialityPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ConfidentialityPackage.eNS_URI) : ConfidentialityPackage.eINSTANCE);
@@ -217,25 +221,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificationParameterEquation_RequiredSpecificationParameter() {
-		return (EReference)specificationParameterEquationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSpecificationParameterEquation_RequiredInterfaceNames() {
-		return (EAttribute)specificationParameterEquationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSpecificationParameterEquation_ProvidedSpecificationParameter() {
+	public EReference getSpecificationParameterEquation_LeftSpecificationParameter() {
 		return (EReference)specificationParameterEquationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -244,8 +230,26 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSpecificationParameterEquation_ProvidedInterfaceNames() {
-		return (EAttribute)specificationParameterEquationEClass.getEStructuralFeatures().get(1);
+	public EReference getSpecificationParameterEquation_RightSpecificationParameter() {
+		return (EReference)specificationParameterEquationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSpecificationParameterEquation_LeftInterfaces() {
+		return (EReference)specificationParameterEquationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSpecificationParameterEquation_RightInterfaces() {
+		return (EReference)specificationParameterEquationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -286,10 +290,10 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 		createEAttribute(dataSetMapParameter2KeyAssignmentEClass, DATA_SET_MAP_PARAMETER2_KEY_ASSIGNMENT__ASSIGNED_KEY);
 
 		specificationParameterEquationEClass = createEClass(SPECIFICATION_PARAMETER_EQUATION);
-		createEReference(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER);
-		createEAttribute(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES);
-		createEReference(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER);
-		createEAttribute(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES);
+		createEReference(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__LEFT_SPECIFICATION_PARAMETER);
+		createEReference(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__RIGHT_SPECIFICATION_PARAMETER);
+		createEReference(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__LEFT_INTERFACES);
+		createEReference(specificationParameterEquationEClass, SPECIFICATION_PARAMETER_EQUATION__RIGHT_INTERFACES);
 	}
 
 	/**
@@ -318,6 +322,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 		// Obtain other dependent packages
 		ConfidentialityPackage theConfidentialityPackage = (ConfidentialityPackage)EPackage.Registry.INSTANCE.getEPackage(ConfidentialityPackage.eNS_URI);
 		DataPackage theDataPackage = (DataPackage)EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
+		org.palladiosimulator.pcm.repository.RepositoryPackage theRepositoryPackage_1 = (org.palladiosimulator.pcm.repository.RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(org.palladiosimulator.pcm.repository.RepositoryPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -340,10 +345,10 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 		initEAttribute(getDataSetMapParameter2KeyAssignment_AssignedKey(), ecorePackage.getEString(), "assignedKey", null, 1, 1, DataSetMapParameter2KeyAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(specificationParameterEquationEClass, SpecificationParameterEquation.class, "SpecificationParameterEquation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSpecificationParameterEquation_ProvidedSpecificationParameter(), theDataPackage.getSpecificationParameter(), null, "providedSpecificationParameter", null, 1, 1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSpecificationParameterEquation_ProvidedInterfaceNames(), ecorePackage.getEString(), "providedInterfaceNames", null, 0, -1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpecificationParameterEquation_RequiredSpecificationParameter(), theDataPackage.getSpecificationParameter(), null, "requiredSpecificationParameter", null, 1, 1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSpecificationParameterEquation_RequiredInterfaceNames(), ecorePackage.getEString(), "requiredInterfaceNames", null, 0, -1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecificationParameterEquation_LeftSpecificationParameter(), theDataPackage.getSpecificationParameter(), null, "leftSpecificationParameter", null, 1, 1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecificationParameterEquation_RightSpecificationParameter(), theDataPackage.getSpecificationParameter(), null, "rightSpecificationParameter", null, 1, 1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecificationParameterEquation_LeftInterfaces(), theRepositoryPackage_1.getInterface(), null, "leftInterfaces", null, 1, -1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecificationParameterEquation_RightInterfaces(), theRepositoryPackage_1.getInterface(), null, "rightInterfaces", null, 1, -1, SpecificationParameterEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //SystemPackageImpl

@@ -23,6 +23,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.palladiosimulator.pcm.repository.Interface;
 
 /**
  * This is the item provider adapter for a {@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation} object.
@@ -52,28 +53,28 @@ public class SpecificationParameterEquationItemProvider extends IdentifiedElemen
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addProvidedSpecificationParameterPropertyDescriptor(object);
-			addProvidedInterfaceNamesPropertyDescriptor(object);
-			addRequiredSpecificationParameterPropertyDescriptor(object);
-			addRequiredInterfaceNamesPropertyDescriptor(object);
+			addLeftSpecificationParameterPropertyDescriptor(object);
+			addRightSpecificationParameterPropertyDescriptor(object);
+			addLeftInterfacesPropertyDescriptor(object);
+			addRightInterfacesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Provided Specification Parameter feature.
+	 * This adds a property descriptor for the Left Specification Parameter feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addProvidedSpecificationParameterPropertyDescriptor(Object object) {
+	protected void addLeftSpecificationParameterPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SpecificationParameterEquation_providedSpecificationParameter_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SpecificationParameterEquation_providedSpecificationParameter_feature", "_UI_SpecificationParameterEquation_type"),
-				 SystemPackage.Literals.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER,
+				 getString("_UI_SpecificationParameterEquation_leftSpecificationParameter_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SpecificationParameterEquation_leftSpecificationParameter_feature", "_UI_SpecificationParameterEquation_type"),
+				 SystemPackage.Literals.SPECIFICATION_PARAMETER_EQUATION__LEFT_SPECIFICATION_PARAMETER,
 				 true,
 				 false,
 				 true,
@@ -83,41 +84,19 @@ public class SpecificationParameterEquationItemProvider extends IdentifiedElemen
 	}
 
 	/**
-	 * This adds a property descriptor for the Provided Interface Names feature.
+	 * This adds a property descriptor for the Right Specification Parameter feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addProvidedInterfaceNamesPropertyDescriptor(Object object) {
+	protected void addRightSpecificationParameterPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SpecificationParameterEquation_providedInterfaceNames_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SpecificationParameterEquation_providedInterfaceNames_feature", "_UI_SpecificationParameterEquation_type"),
-				 SystemPackage.Literals.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Required Specification Parameter feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRequiredSpecificationParameterPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SpecificationParameterEquation_requiredSpecificationParameter_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SpecificationParameterEquation_requiredSpecificationParameter_feature", "_UI_SpecificationParameterEquation_type"),
-				 SystemPackage.Literals.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER,
+				 getString("_UI_SpecificationParameterEquation_rightSpecificationParameter_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SpecificationParameterEquation_rightSpecificationParameter_feature", "_UI_SpecificationParameterEquation_type"),
+				 SystemPackage.Literals.SPECIFICATION_PARAMETER_EQUATION__RIGHT_SPECIFICATION_PARAMETER,
 				 true,
 				 false,
 				 true,
@@ -126,24 +105,47 @@ public class SpecificationParameterEquationItemProvider extends IdentifiedElemen
 				 null));
 	}
 
+
 	/**
-	 * This adds a property descriptor for the Required Interface Names feature.
+	 * This adds a property descriptor for the Left Interfaces feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRequiredInterfaceNamesPropertyDescriptor(Object object) {
+	protected void addLeftInterfacesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SpecificationParameterEquation_requiredInterfaceNames_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SpecificationParameterEquation_requiredInterfaceNames_feature", "_UI_SpecificationParameterEquation_type"),
-				 SystemPackage.Literals.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES,
+				 getString("_UI_SpecificationParameterEquation_leftInterfaces_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SpecificationParameterEquation_leftInterfaces_feature", "_UI_SpecificationParameterEquation_type"),
+				 SystemPackage.Literals.SPECIFICATION_PARAMETER_EQUATION__LEFT_INTERFACES,
 				 true,
 				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Right Interfaces feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRightInterfacesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SpecificationParameterEquation_rightInterfaces_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SpecificationParameterEquation_rightInterfaces_feature", "_UI_SpecificationParameterEquation_type"),
+				 SystemPackage.Literals.SPECIFICATION_PARAMETER_EQUATION__RIGHT_INTERFACES,
+				 true,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -179,21 +181,24 @@ public class SpecificationParameterEquationItemProvider extends IdentifiedElemen
 	 * @generated NOT
 	 */
 	private String getLabel(SpecificationParameterEquation dpu) {
-		SpecificationParameter pdp = dpu.getProvidedSpecificationParameter();
+		SpecificationParameter pdp = dpu.getLeftSpecificationParameter();
 		String pdps = "";
-		List<String> providedNames = dpu.getProvidedInterfaceNames();
-		if (providedNames != null) {
-			pdps += IterableUtil.join(providedNames, "[", ",", "]");
+		
+		final List<Interface> leftInterfaces = dpu.getLeftInterfaces();
+		if (leftInterfaces != null) {
+			final Iterable<String> leftInterfaceNames = leftInterfaces.stream().map(Interface::getEntityName)::iterator;
+			pdps += IterableUtil.join(leftInterfaceNames, "[", ",", "]");
 		}
 		pdps += ".";
 		if (pdp != null) {
 			pdps += pdp.getName();
 		}
-		SpecificationParameter rdp = dpu.getRequiredSpecificationParameter();
+		SpecificationParameter rdp = dpu.getRightSpecificationParameter();
 		String rdps = "";
-		List<String> requiredNames = dpu.getRequiredInterfaceNames();
-		if (requiredNames != null) {
-			rdps += IterableUtil.join(requiredNames, "[", ",", "]");
+		final List<Interface> rightInterfaces = dpu.getRightInterfaces();
+		if (rightInterfaces != null) {
+			final Iterable<String> rigtInterfaceNames = rightInterfaces.stream().map(Interface::getEntityName)::iterator;
+			rdps += IterableUtil.join(rigtInterfaceNames, "[", ",", "]");
 		}
 		rdps += ".";
 		if (rdp != null) {
@@ -213,13 +218,6 @@ public class SpecificationParameterEquationItemProvider extends IdentifiedElemen
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(SpecificationParameterEquation.class)) {
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES:
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

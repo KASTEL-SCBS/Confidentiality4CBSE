@@ -234,40 +234,40 @@ public interface SystemPackage extends EPackage {
 	int SPECIFICATION_PARAMETER_EQUATION__ID = ConfidentialityPackage.IDENTIFIED_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Provided Specification Parameter</b></em>' reference.
+	 * The feature id for the '<em><b>Left Specification Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+	int SPECIFICATION_PARAMETER_EQUATION__LEFT_SPECIFICATION_PARAMETER = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Provided Interface Names</b></em>' attribute list.
+	 * The feature id for the '<em><b>Right Specification Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int SPECIFICATION_PARAMETER_EQUATION__RIGHT_SPECIFICATION_PARAMETER = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Required Specification Parameter</b></em>' reference.
+	 * The feature id for the '<em><b>Left Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+	int SPECIFICATION_PARAMETER_EQUATION__LEFT_INTERFACES = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Required Interface Names</b></em>' attribute list.
+	 * The feature id for the '<em><b>Right Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
+	int SPECIFICATION_PARAMETER_EQUATION__RIGHT_INTERFACES = ConfidentialityPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Specification Parameter Equation</em>' class.
@@ -362,48 +362,48 @@ public interface SystemPackage extends EPackage {
 	EClass getSpecificationParameterEquation();
 
 	/**
-	 * Returns the meta object for the reference '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRequiredSpecificationParameter <em>Required Specification Parameter</em>}'.
+	 * Returns the meta object for the reference '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getLeftSpecificationParameter <em>Left Specification Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Required Specification Parameter</em>'.
-	 * @see edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRequiredSpecificationParameter()
+	 * @return the meta object for the reference '<em>Left Specification Parameter</em>'.
+	 * @see edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getLeftSpecificationParameter()
 	 * @see #getSpecificationParameterEquation()
 	 * @generated
 	 */
-	EReference getSpecificationParameterEquation_RequiredSpecificationParameter();
+	EReference getSpecificationParameterEquation_LeftSpecificationParameter();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRequiredInterfaceNames <em>Required Interface Names</em>}'.
+	 * Returns the meta object for the reference '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRightSpecificationParameter <em>Right Specification Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Required Interface Names</em>'.
-	 * @see edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRequiredInterfaceNames()
+	 * @return the meta object for the reference '<em>Right Specification Parameter</em>'.
+	 * @see edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRightSpecificationParameter()
 	 * @see #getSpecificationParameterEquation()
 	 * @generated
 	 */
-	EAttribute getSpecificationParameterEquation_RequiredInterfaceNames();
+	EReference getSpecificationParameterEquation_RightSpecificationParameter();
 
 	/**
-	 * Returns the meta object for the reference '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getProvidedSpecificationParameter <em>Provided Specification Parameter</em>}'.
+	 * Returns the meta object for the reference list '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getLeftInterfaces <em>Left Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Provided Specification Parameter</em>'.
-	 * @see edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getProvidedSpecificationParameter()
+	 * @return the meta object for the reference list '<em>Left Interfaces</em>'.
+	 * @see edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getLeftInterfaces()
 	 * @see #getSpecificationParameterEquation()
 	 * @generated
 	 */
-	EReference getSpecificationParameterEquation_ProvidedSpecificationParameter();
+	EReference getSpecificationParameterEquation_LeftInterfaces();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getProvidedInterfaceNames <em>Provided Interface Names</em>}'.
+	 * Returns the meta object for the reference list '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRightInterfaces <em>Right Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Provided Interface Names</em>'.
-	 * @see edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getProvidedInterfaceNames()
+	 * @return the meta object for the reference list '<em>Right Interfaces</em>'.
+	 * @see edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRightInterfaces()
 	 * @see #getSpecificationParameterEquation()
 	 * @generated
 	 */
-	EAttribute getSpecificationParameterEquation_ProvidedInterfaceNames();
+	EReference getSpecificationParameterEquation_RightInterfaces();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -493,36 +493,36 @@ public interface SystemPackage extends EPackage {
 		EClass SPECIFICATION_PARAMETER_EQUATION = eINSTANCE.getSpecificationParameterEquation();
 
 		/**
-		 * The meta object literal for the '<em><b>Required Specification Parameter</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Left Specification Parameter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER = eINSTANCE.getSpecificationParameterEquation_RequiredSpecificationParameter();
+		EReference SPECIFICATION_PARAMETER_EQUATION__LEFT_SPECIFICATION_PARAMETER = eINSTANCE.getSpecificationParameterEquation_LeftSpecificationParameter();
 
 		/**
-		 * The meta object literal for the '<em><b>Required Interface Names</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Right Specification Parameter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES = eINSTANCE.getSpecificationParameterEquation_RequiredInterfaceNames();
+		EReference SPECIFICATION_PARAMETER_EQUATION__RIGHT_SPECIFICATION_PARAMETER = eINSTANCE.getSpecificationParameterEquation_RightSpecificationParameter();
 
 		/**
-		 * The meta object literal for the '<em><b>Provided Specification Parameter</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Left Interfaces</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER = eINSTANCE.getSpecificationParameterEquation_ProvidedSpecificationParameter();
+		EReference SPECIFICATION_PARAMETER_EQUATION__LEFT_INTERFACES = eINSTANCE.getSpecificationParameterEquation_LeftInterfaces();
 
 		/**
-		 * The meta object literal for the '<em><b>Provided Interface Names</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Right Interfaces</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES = eINSTANCE.getSpecificationParameterEquation_ProvidedInterfaceNames();
+		EReference SPECIFICATION_PARAMETER_EQUATION__RIGHT_INTERFACES = eINSTANCE.getSpecificationParameterEquation_RightInterfaces();
 
 	}
 

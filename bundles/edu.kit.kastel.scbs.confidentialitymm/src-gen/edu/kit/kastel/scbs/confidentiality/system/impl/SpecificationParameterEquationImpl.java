@@ -17,7 +17,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.palladiosimulator.pcm.repository.Interface;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,54 +28,54 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.impl.SpecificationParameterEquationImpl#getProvidedSpecificationParameter <em>Provided Specification Parameter</em>}</li>
- *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.impl.SpecificationParameterEquationImpl#getProvidedInterfaceNames <em>Provided Interface Names</em>}</li>
- *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.impl.SpecificationParameterEquationImpl#getRequiredSpecificationParameter <em>Required Specification Parameter</em>}</li>
- *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.impl.SpecificationParameterEquationImpl#getRequiredInterfaceNames <em>Required Interface Names</em>}</li>
+ *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.impl.SpecificationParameterEquationImpl#getLeftSpecificationParameter <em>Left Specification Parameter</em>}</li>
+ *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.impl.SpecificationParameterEquationImpl#getRightSpecificationParameter <em>Right Specification Parameter</em>}</li>
+ *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.impl.SpecificationParameterEquationImpl#getLeftInterfaces <em>Left Interfaces</em>}</li>
+ *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.impl.SpecificationParameterEquationImpl#getRightInterfaces <em>Right Interfaces</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SpecificationParameterEquationImpl extends IdentifiedElementImpl implements SpecificationParameterEquation {
 	/**
-	 * The cached value of the '{@link #getProvidedSpecificationParameter() <em>Provided Specification Parameter</em>}' reference.
+	 * The cached value of the '{@link #getLeftSpecificationParameter() <em>Left Specification Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getProvidedSpecificationParameter()
+	 * @see #getLeftSpecificationParameter()
 	 * @generated
 	 * @ordered
 	 */
-	protected SpecificationParameter providedSpecificationParameter;
+	protected SpecificationParameter leftSpecificationParameter;
 
 	/**
-	 * The cached value of the '{@link #getProvidedInterfaceNames() <em>Provided Interface Names</em>}' attribute list.
+	 * The cached value of the '{@link #getRightSpecificationParameter() <em>Right Specification Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getProvidedInterfaceNames()
+	 * @see #getRightSpecificationParameter()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> providedInterfaceNames;
+	protected SpecificationParameter rightSpecificationParameter;
 
 	/**
-	 * The cached value of the '{@link #getRequiredSpecificationParameter() <em>Required Specification Parameter</em>}' reference.
+	 * The cached value of the '{@link #getLeftInterfaces() <em>Left Interfaces</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRequiredSpecificationParameter()
+	 * @see #getLeftInterfaces()
 	 * @generated
 	 * @ordered
 	 */
-	protected SpecificationParameter requiredSpecificationParameter;
+	protected EList<Interface> leftInterfaces;
 
 	/**
-	 * The cached value of the '{@link #getRequiredInterfaceNames() <em>Required Interface Names</em>}' attribute list.
+	 * The cached value of the '{@link #getRightInterfaces() <em>Right Interfaces</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRequiredInterfaceNames()
+	 * @see #getRightInterfaces()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> requiredInterfaceNames;
+	protected EList<Interface> rightInterfaces;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -100,16 +101,16 @@ public class SpecificationParameterEquationImpl extends IdentifiedElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SpecificationParameter getRequiredSpecificationParameter() {
-		if (requiredSpecificationParameter != null && requiredSpecificationParameter.eIsProxy()) {
-			InternalEObject oldRequiredSpecificationParameter = (InternalEObject)requiredSpecificationParameter;
-			requiredSpecificationParameter = (SpecificationParameter)eResolveProxy(oldRequiredSpecificationParameter);
-			if (requiredSpecificationParameter != oldRequiredSpecificationParameter) {
+	public SpecificationParameter getLeftSpecificationParameter() {
+		if (leftSpecificationParameter != null && leftSpecificationParameter.eIsProxy()) {
+			InternalEObject oldLeftSpecificationParameter = (InternalEObject)leftSpecificationParameter;
+			leftSpecificationParameter = (SpecificationParameter)eResolveProxy(oldLeftSpecificationParameter);
+			if (leftSpecificationParameter != oldLeftSpecificationParameter) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemPackage.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER, oldRequiredSpecificationParameter, requiredSpecificationParameter));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemPackage.SPECIFICATION_PARAMETER_EQUATION__LEFT_SPECIFICATION_PARAMETER, oldLeftSpecificationParameter, leftSpecificationParameter));
 			}
 		}
-		return requiredSpecificationParameter;
+		return leftSpecificationParameter;
 	}
 
 	/**
@@ -117,8 +118,8 @@ public class SpecificationParameterEquationImpl extends IdentifiedElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SpecificationParameter basicGetRequiredSpecificationParameter() {
-		return requiredSpecificationParameter;
+	public SpecificationParameter basicGetLeftSpecificationParameter() {
+		return leftSpecificationParameter;
 	}
 
 	/**
@@ -126,11 +127,11 @@ public class SpecificationParameterEquationImpl extends IdentifiedElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRequiredSpecificationParameter(SpecificationParameter newRequiredSpecificationParameter) {
-		SpecificationParameter oldRequiredSpecificationParameter = requiredSpecificationParameter;
-		requiredSpecificationParameter = newRequiredSpecificationParameter;
+	public void setLeftSpecificationParameter(SpecificationParameter newLeftSpecificationParameter) {
+		SpecificationParameter oldLeftSpecificationParameter = leftSpecificationParameter;
+		leftSpecificationParameter = newLeftSpecificationParameter;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemPackage.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER, oldRequiredSpecificationParameter, requiredSpecificationParameter));
+			eNotify(new ENotificationImpl(this, Notification.SET, SystemPackage.SPECIFICATION_PARAMETER_EQUATION__LEFT_SPECIFICATION_PARAMETER, oldLeftSpecificationParameter, leftSpecificationParameter));
 	}
 
 	/**
@@ -138,28 +139,16 @@ public class SpecificationParameterEquationImpl extends IdentifiedElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getRequiredInterfaceNames() {
-		if (requiredInterfaceNames == null) {
-			requiredInterfaceNames = new EDataTypeUniqueEList<String>(String.class, this, SystemPackage.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES);
-		}
-		return requiredInterfaceNames;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SpecificationParameter getProvidedSpecificationParameter() {
-		if (providedSpecificationParameter != null && providedSpecificationParameter.eIsProxy()) {
-			InternalEObject oldProvidedSpecificationParameter = (InternalEObject)providedSpecificationParameter;
-			providedSpecificationParameter = (SpecificationParameter)eResolveProxy(oldProvidedSpecificationParameter);
-			if (providedSpecificationParameter != oldProvidedSpecificationParameter) {
+	public SpecificationParameter getRightSpecificationParameter() {
+		if (rightSpecificationParameter != null && rightSpecificationParameter.eIsProxy()) {
+			InternalEObject oldRightSpecificationParameter = (InternalEObject)rightSpecificationParameter;
+			rightSpecificationParameter = (SpecificationParameter)eResolveProxy(oldRightSpecificationParameter);
+			if (rightSpecificationParameter != oldRightSpecificationParameter) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemPackage.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER, oldProvidedSpecificationParameter, providedSpecificationParameter));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemPackage.SPECIFICATION_PARAMETER_EQUATION__RIGHT_SPECIFICATION_PARAMETER, oldRightSpecificationParameter, rightSpecificationParameter));
 			}
 		}
-		return providedSpecificationParameter;
+		return rightSpecificationParameter;
 	}
 
 	/**
@@ -167,8 +156,8 @@ public class SpecificationParameterEquationImpl extends IdentifiedElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SpecificationParameter basicGetProvidedSpecificationParameter() {
-		return providedSpecificationParameter;
+	public SpecificationParameter basicGetRightSpecificationParameter() {
+		return rightSpecificationParameter;
 	}
 
 	/**
@@ -176,11 +165,11 @@ public class SpecificationParameterEquationImpl extends IdentifiedElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProvidedSpecificationParameter(SpecificationParameter newProvidedSpecificationParameter) {
-		SpecificationParameter oldProvidedSpecificationParameter = providedSpecificationParameter;
-		providedSpecificationParameter = newProvidedSpecificationParameter;
+	public void setRightSpecificationParameter(SpecificationParameter newRightSpecificationParameter) {
+		SpecificationParameter oldRightSpecificationParameter = rightSpecificationParameter;
+		rightSpecificationParameter = newRightSpecificationParameter;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemPackage.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER, oldProvidedSpecificationParameter, providedSpecificationParameter));
+			eNotify(new ENotificationImpl(this, Notification.SET, SystemPackage.SPECIFICATION_PARAMETER_EQUATION__RIGHT_SPECIFICATION_PARAMETER, oldRightSpecificationParameter, rightSpecificationParameter));
 	}
 
 	/**
@@ -188,11 +177,23 @@ public class SpecificationParameterEquationImpl extends IdentifiedElementImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getProvidedInterfaceNames() {
-		if (providedInterfaceNames == null) {
-			providedInterfaceNames = new EDataTypeUniqueEList<String>(String.class, this, SystemPackage.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES);
+	public EList<Interface> getLeftInterfaces() {
+		if (leftInterfaces == null) {
+			leftInterfaces = new EObjectResolvingEList<Interface>(Interface.class, this, SystemPackage.SPECIFICATION_PARAMETER_EQUATION__LEFT_INTERFACES);
 		}
-		return providedInterfaceNames;
+		return leftInterfaces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Interface> getRightInterfaces() {
+		if (rightInterfaces == null) {
+			rightInterfaces = new EObjectResolvingEList<Interface>(Interface.class, this, SystemPackage.SPECIFICATION_PARAMETER_EQUATION__RIGHT_INTERFACES);
+		}
+		return rightInterfaces;
 	}
 
 	/**
@@ -203,16 +204,16 @@ public class SpecificationParameterEquationImpl extends IdentifiedElementImpl im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER:
-				if (resolve) return getProvidedSpecificationParameter();
-				return basicGetProvidedSpecificationParameter();
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES:
-				return getProvidedInterfaceNames();
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER:
-				if (resolve) return getRequiredSpecificationParameter();
-				return basicGetRequiredSpecificationParameter();
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES:
-				return getRequiredInterfaceNames();
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__LEFT_SPECIFICATION_PARAMETER:
+				if (resolve) return getLeftSpecificationParameter();
+				return basicGetLeftSpecificationParameter();
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__RIGHT_SPECIFICATION_PARAMETER:
+				if (resolve) return getRightSpecificationParameter();
+				return basicGetRightSpecificationParameter();
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__LEFT_INTERFACES:
+				return getLeftInterfaces();
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__RIGHT_INTERFACES:
+				return getRightInterfaces();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -226,19 +227,19 @@ public class SpecificationParameterEquationImpl extends IdentifiedElementImpl im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER:
-				setProvidedSpecificationParameter((SpecificationParameter)newValue);
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__LEFT_SPECIFICATION_PARAMETER:
+				setLeftSpecificationParameter((SpecificationParameter)newValue);
 				return;
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES:
-				getProvidedInterfaceNames().clear();
-				getProvidedInterfaceNames().addAll((Collection<? extends String>)newValue);
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__RIGHT_SPECIFICATION_PARAMETER:
+				setRightSpecificationParameter((SpecificationParameter)newValue);
 				return;
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER:
-				setRequiredSpecificationParameter((SpecificationParameter)newValue);
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__LEFT_INTERFACES:
+				getLeftInterfaces().clear();
+				getLeftInterfaces().addAll((Collection<? extends Interface>)newValue);
 				return;
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES:
-				getRequiredInterfaceNames().clear();
-				getRequiredInterfaceNames().addAll((Collection<? extends String>)newValue);
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__RIGHT_INTERFACES:
+				getRightInterfaces().clear();
+				getRightInterfaces().addAll((Collection<? extends Interface>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -252,17 +253,17 @@ public class SpecificationParameterEquationImpl extends IdentifiedElementImpl im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER:
-				setProvidedSpecificationParameter((SpecificationParameter)null);
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__LEFT_SPECIFICATION_PARAMETER:
+				setLeftSpecificationParameter((SpecificationParameter)null);
 				return;
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES:
-				getProvidedInterfaceNames().clear();
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__RIGHT_SPECIFICATION_PARAMETER:
+				setRightSpecificationParameter((SpecificationParameter)null);
 				return;
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER:
-				setRequiredSpecificationParameter((SpecificationParameter)null);
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__LEFT_INTERFACES:
+				getLeftInterfaces().clear();
 				return;
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES:
-				getRequiredInterfaceNames().clear();
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__RIGHT_INTERFACES:
+				getRightInterfaces().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -276,34 +277,16 @@ public class SpecificationParameterEquationImpl extends IdentifiedElementImpl im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_SPECIFICATION_PARAMETER:
-				return providedSpecificationParameter != null;
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__PROVIDED_INTERFACE_NAMES:
-				return providedInterfaceNames != null && !providedInterfaceNames.isEmpty();
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_SPECIFICATION_PARAMETER:
-				return requiredSpecificationParameter != null;
-			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__REQUIRED_INTERFACE_NAMES:
-				return requiredInterfaceNames != null && !requiredInterfaceNames.isEmpty();
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__LEFT_SPECIFICATION_PARAMETER:
+				return leftSpecificationParameter != null;
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__RIGHT_SPECIFICATION_PARAMETER:
+				return rightSpecificationParameter != null;
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__LEFT_INTERFACES:
+				return leftInterfaces != null && !leftInterfaces.isEmpty();
+			case SystemPackage.SPECIFICATION_PARAMETER_EQUATION__RIGHT_INTERFACES:
+				return rightInterfaces != null && !rightInterfaces.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (providedInterfaceNames: ");
-		result.append(providedInterfaceNames);
-		result.append(", requiredInterfaceNames: ");
-		result.append(requiredInterfaceNames);
-		result.append(')');
-		return result.toString();
 	}
 
 } //SpecificationParameterEquationImpl

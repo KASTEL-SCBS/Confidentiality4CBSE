@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.palladiosimulator.pcm.PcmPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -108,6 +109,9 @@ public class ConfidentialityPackageImpl extends EPackageImpl implements Confiden
 		ConfidentialityPackageImpl theConfidentialityPackage = (ConfidentialityPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ConfidentialityPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ConfidentialityPackageImpl());
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		PcmPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		DataPackageImpl theDataPackage = (DataPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI) instanceof DataPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI) : DataPackage.eINSTANCE);

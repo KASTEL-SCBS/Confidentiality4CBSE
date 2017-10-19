@@ -6,6 +6,7 @@ import edu.kit.kastel.scbs.confidentiality.IdentifiedElement;
 
 import edu.kit.kastel.scbs.confidentiality.data.SpecificationParameter;
 import org.eclipse.emf.common.util.EList;
+import org.palladiosimulator.pcm.repository.Interface;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,10 +17,10 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getProvidedSpecificationParameter <em>Provided Specification Parameter</em>}</li>
- *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getProvidedInterfaceNames <em>Provided Interface Names</em>}</li>
- *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRequiredSpecificationParameter <em>Required Specification Parameter</em>}</li>
- *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRequiredInterfaceNames <em>Required Interface Names</em>}</li>
+ *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getLeftSpecificationParameter <em>Left Specification Parameter</em>}</li>
+ *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRightSpecificationParameter <em>Right Specification Parameter</em>}</li>
+ *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getLeftInterfaces <em>Left Interfaces</em>}</li>
+ *   <li>{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRightInterfaces <em>Right Interfaces</em>}</li>
  * </ul>
  *
  * @see edu.kit.kastel.scbs.confidentiality.system.SystemPackage#getSpecificationParameterEquation()
@@ -28,87 +29,87 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface SpecificationParameterEquation extends IdentifiedElement {
 	/**
-	 * Returns the value of the '<em><b>Required Specification Parameter</b></em>' reference.
+	 * Returns the value of the '<em><b>Left Specification Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Required Specification Parameter</em>' reference isn't clear,
+	 * If the meaning of the '<em>Left Specification Parameter</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required Specification Parameter</em>' reference.
-	 * @see #setRequiredSpecificationParameter(SpecificationParameter)
-	 * @see edu.kit.kastel.scbs.confidentiality.system.SystemPackage#getSpecificationParameterEquation_RequiredSpecificationParameter()
+	 * @return the value of the '<em>Left Specification Parameter</em>' reference.
+	 * @see #setLeftSpecificationParameter(SpecificationParameter)
+	 * @see edu.kit.kastel.scbs.confidentiality.system.SystemPackage#getSpecificationParameterEquation_LeftSpecificationParameter()
 	 * @model required="true"
 	 * @generated
 	 */
-	SpecificationParameter getRequiredSpecificationParameter();
+	SpecificationParameter getLeftSpecificationParameter();
 
 	/**
-	 * Sets the value of the '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRequiredSpecificationParameter <em>Required Specification Parameter</em>}' reference.
+	 * Sets the value of the '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getLeftSpecificationParameter <em>Left Specification Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Required Specification Parameter</em>' reference.
-	 * @see #getRequiredSpecificationParameter()
+	 * @param value the new value of the '<em>Left Specification Parameter</em>' reference.
+	 * @see #getLeftSpecificationParameter()
 	 * @generated
 	 */
-	void setRequiredSpecificationParameter(SpecificationParameter value);
+	void setLeftSpecificationParameter(SpecificationParameter value);
 
 	/**
-	 * Returns the value of the '<em><b>Required Interface Names</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Right Specification Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Required Interface Names</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Right Specification Parameter</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required Interface Names</em>' attribute list.
-	 * @see edu.kit.kastel.scbs.confidentiality.system.SystemPackage#getSpecificationParameterEquation_RequiredInterfaceNames()
-	 * @model
-	 * @generated
-	 */
-	EList<String> getRequiredInterfaceNames();
-
-	/**
-	 * Returns the value of the '<em><b>Provided Specification Parameter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Provided Specification Parameter</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Provided Specification Parameter</em>' reference.
-	 * @see #setProvidedSpecificationParameter(SpecificationParameter)
-	 * @see edu.kit.kastel.scbs.confidentiality.system.SystemPackage#getSpecificationParameterEquation_ProvidedSpecificationParameter()
+	 * @return the value of the '<em>Right Specification Parameter</em>' reference.
+	 * @see #setRightSpecificationParameter(SpecificationParameter)
+	 * @see edu.kit.kastel.scbs.confidentiality.system.SystemPackage#getSpecificationParameterEquation_RightSpecificationParameter()
 	 * @model required="true"
 	 * @generated
 	 */
-	SpecificationParameter getProvidedSpecificationParameter();
+	SpecificationParameter getRightSpecificationParameter();
 
 	/**
-	 * Sets the value of the '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getProvidedSpecificationParameter <em>Provided Specification Parameter</em>}' reference.
+	 * Sets the value of the '{@link edu.kit.kastel.scbs.confidentiality.system.SpecificationParameterEquation#getRightSpecificationParameter <em>Right Specification Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Provided Specification Parameter</em>' reference.
-	 * @see #getProvidedSpecificationParameter()
+	 * @param value the new value of the '<em>Right Specification Parameter</em>' reference.
+	 * @see #getRightSpecificationParameter()
 	 * @generated
 	 */
-	void setProvidedSpecificationParameter(SpecificationParameter value);
+	void setRightSpecificationParameter(SpecificationParameter value);
 
 	/**
-	 * Returns the value of the '<em><b>Provided Interface Names</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Left Interfaces</b></em>' reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.repository.Interface}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Provided Interface Names</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Left Interfaces</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Provided Interface Names</em>' attribute list.
-	 * @see edu.kit.kastel.scbs.confidentiality.system.SystemPackage#getSpecificationParameterEquation_ProvidedInterfaceNames()
-	 * @model
+	 * @return the value of the '<em>Left Interfaces</em>' reference list.
+	 * @see edu.kit.kastel.scbs.confidentiality.system.SystemPackage#getSpecificationParameterEquation_LeftInterfaces()
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<String> getProvidedInterfaceNames();
+	EList<Interface> getLeftInterfaces();
+
+	/**
+	 * Returns the value of the '<em><b>Right Interfaces</b></em>' reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.repository.Interface}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Right Interfaces</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Right Interfaces</em>' reference list.
+	 * @see edu.kit.kastel.scbs.confidentiality.system.SystemPackage#getSpecificationParameterEquation_RightInterfaces()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<Interface> getRightInterfaces();
 
 } // SpecificationParameterEquation
