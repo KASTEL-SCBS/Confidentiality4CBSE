@@ -29,7 +29,7 @@
     <repository>
       <id>EMF Profiles</id>
       <layout>p2</layout>
-      <url>http://www.modelversioning.org/emf-profiles-updatesite</url>
+      <url>https://sdqbuild.ipd.kit.edu/nexus/content/repositories/emf-profiles/</url>
     </repository>
     <repository>
       <id>Palladio</id>
