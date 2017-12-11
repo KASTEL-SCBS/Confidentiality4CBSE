@@ -12,10 +12,10 @@
 	<features name="edu.kit.ipd.sdq.commons.util.java.feature.source.feature.group" versionRange="[1.0.0,2.0.0)"/>
 	<features name="edu.kit.ipd.sdq.commons.util.mdsdprofiles.feature.source.feature.group" versionRange="[1.0.0,2.0.0)"/>
       </repositories>
-      <repositories location="http://www.modelversioning.org/emf-profiles-updatesite" mirrorArtifacts="false">
+      <repositories location="https://sdqbuild.ipd.kit.edu/nexus/content/repositories/emf-profiles/" mirrorArtifacts="true">
 	<features name="org.modelversioning.emfprofile.feature.feature.group" versionRange="[1.0.0,2.0.0)"/>
       </repositories>
-      <repositories location="https://sdqbuild.ipd.kit.edu/nexus/content/repositories/palladiosimulator-release/" mirrorArtifacts="false">
+      <repositories location="https://sdqbuild.ipd.kit.edu/nexus/content/repositories/palladiosimulator-release/" mirrorArtifacts="true">
 	<features name="de.uka.ipd.sdq.identifier.source.feature.feature.group" versionRange="2.1.0"/>
 	<features name="org.palladiosimulator.pcm.source.feature.feature.group" versionRange="4.0.1"/>
 	<features name="org.palladiosimulator.editors.tree.source.feature.feature.group" versionRange="4.0.1"/>
