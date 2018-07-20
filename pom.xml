@@ -4,7 +4,7 @@
   <parent>
     <groupId>edu.kit.kastel.scbs.confidentiality</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <relativePath>releng/edu.kit.kastel.scbs.confidentiality.parent</relativePath>
   </parent>
   <artifactId>edu.kit.kastel.scbs.confidentiality.main</artifactId>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/edu.kit.kastel.scbs.confidentiality.feature_1.0.0.qualifier.jar" id="edu.kit.kastel.scbs.confidentiality.feature" version="1.0.0.qualifier">
+   <feature url="features/edu.kit.kastel.scbs.confidentiality.feature_1.0.0.jar" id="edu.kit.kastel.scbs.confidentiality.feature" version="1.0.0">
       <category name="confidentiality"/>
    </feature>
-   <feature id="edu.kit.kastel.scbs.confidentiality.feature.source" version="1.0.0.qualifier">
+   <feature id="edu.kit.kastel.scbs.confidentiality.feature.source" version="1.0.0">
       <category name="confidentiality"/>
    </feature>
    <category-def name="confidentiality" label="Confidentiality4CBSE">
