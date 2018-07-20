@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aggregator:Aggregation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:aggregator="http://www.eclipse.org/cbi/p2repo/2011/aggregator/1.1.0" label="confidentiality Update Site" buildRoot="target">
+<aggregator:Aggregation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:aggregator="http://www.eclipse.org/cbi/p2repo/2011/aggregator/1.1.0" label="Confidentiality Update Site" buildRoot="target">
   <validationSets label="main">
     <contributions label="local">
       <repositories location="../edu.kit.kastel.scbs.confidentiality.updatesite/target/repository"/>
     </contributions>
     <contributions label="externals">
-      <repositories location="http://sdqbuild.ipd.kit.edu/nexus/content/groups/eclipse-oxygen-complete/" mirrorArtifacts="false">
+      <repositories location="http://download.eclipse.org/releases/oxygen/" mirrorArtifacts="false">
         <features name="org.eclipse.xtend.sdk.feature.group" versionRange="2.10.0"/>
       </repositories>
-      <repositories location="https://sdqbuild.ipd.kit.edu/nexus/content/repositories/kit-sdq-nightly/commons" mirrorArtifacts="false">
+      <repositories location="https://kit-sdq.github.io/updatesite/nightly/commons/" mirrorArtifacts="false">
 	<features name="edu.kit.ipd.sdq.commons.util.java.feature.source.feature.group" versionRange="[1.0.0,2.0.0)"/>
 	<features name="edu.kit.ipd.sdq.commons.util.mdsdprofiles.feature.source.feature.group" versionRange="[1.0.0,2.0.0)"/>
       </repositories>
-      <repositories location="https://sdqbuild.ipd.kit.edu/nexus/content/repositories/emf-profiles/" mirrorArtifacts="true">
+      <repositories location="ttps://sdqweb.ipd.kit.edu/eclipse/emf-profiles/releases/latest/" mirrorArtifacts="true">
 	<features name="org.modelversioning.emfprofile.feature.feature.group" versionRange="[1.0.0,2.0.0)"/>
       </repositories>
-      <repositories location="https://sdqbuild.ipd.kit.edu/nexus/content/repositories/palladiosimulator-release/" mirrorArtifacts="true">
+      <repositories location="https://sdqweb.ipd.kit.edu/eclipse/palladiosimulator/releases/latest" mirrorArtifacts="true">
 	<features name="de.uka.ipd.sdq.identifier.source.feature.feature.group" versionRange="2.1.0"/>
 	<features name="org.palladiosimulator.pcm.source.feature.feature.group" versionRange="4.0.1"/>
 	<features name="org.palladiosimulator.editors.tree.source.feature.feature.group" versionRange="4.0.1"/>
