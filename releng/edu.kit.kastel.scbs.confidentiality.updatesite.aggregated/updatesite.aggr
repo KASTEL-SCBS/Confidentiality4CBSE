@@ -12,7 +12,7 @@
 	<features name="edu.kit.ipd.sdq.commons.util.java.feature.source.feature.group" versionRange="[1.0.0,2.0.0)"/>
 	<features name="edu.kit.ipd.sdq.commons.util.mdsdprofiles.feature.source.feature.group" versionRange="[1.0.0,2.0.0)"/>
       </repositories>
-      <repositories location="ttps://sdqweb.ipd.kit.edu/eclipse/emf-profiles/releases/latest/" mirrorArtifacts="true">
+      <repositories location="https://sdqweb.ipd.kit.edu/eclipse/emf-profiles/releases/latest/" mirrorArtifacts="true">
 	<features name="org.modelversioning.emfprofile.feature.feature.group" versionRange="[1.0.0,2.0.0)"/>
       </repositories>
       <repositories location="https://sdqweb.ipd.kit.edu/eclipse/palladiosimulator/releases/latest" mirrorArtifacts="true">
