@@ -8,7 +8,7 @@
       <repositories location="http://download.eclipse.org/releases/oxygen/" mirrorArtifacts="false">
         <features name="org.eclipse.xtend.sdk.feature.group" versionRange="2.10.0"/>
       </repositories>
-      <repositories location="https://kit-sdq.github.io/updatesite/nightly/commons/" mirrorArtifacts="false">
+      <repositories location="https://kit-sdq.github.io/updatesite/releases/commons/" mirrorArtifacts="false">
 	<features name="edu.kit.ipd.sdq.commons.util.java.feature.source.feature.group" versionRange="[1.0.0,2.0.0)"/>
 	<features name="edu.kit.ipd.sdq.commons.util.mdsdprofiles.feature.source.feature.group" versionRange="[1.0.0,2.0.0)"/>
       </repositories>
