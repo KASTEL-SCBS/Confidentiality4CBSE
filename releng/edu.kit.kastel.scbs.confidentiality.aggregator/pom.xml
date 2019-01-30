@@ -14,7 +14,7 @@
     <module>../../features/edu.kit.kastel.scbs.confidentiality.feature</module>
     <module>../../bundles/edu.kit.kastel.scbs.confidentialitymm</module>
     <module>../../bundles/edu.kit.kastel.scbs.confidentialitymm.edit</module>
-    <module>../../bundles/edu.kit.kastel.scbs.confidentialitymm.editor</module>
+    <!--<module>../../bundles/edu.kit.kastel.scbs.confidentialitymm.editor</module>-->
     <module>../../bundles/edu.kit.kastel.scbs.pcmconfidentialityprofile</module>
   </modules>
 </project>
