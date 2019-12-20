@@ -4,46 +4,59 @@
       label="confidentiality"
       version="1.1.0.qualifier"
       provider-name="SDQ">
+
    <description url="https://github.com/KASTEL-SCBS/Confidentiality4CBSE">
       Specify confidentiality during component-based software engineering
    </description>
+
    <copyright url="http://www.example.com/copyright">
       [TODO Enter Copyright Description here.]
    </copyright>
+
    <license url="http://www.example.com/license">
       [TODO Enter License Description here.]
    </license>
+
    <requires>
-      <!--<import plugin="org.eclipse.ocl.pivot"/>-->
-      <import feature="org.eclipse.xtend.source"/>
-      <import feature="edu.kit.ipd.sdq.commons.util.java.feature.source" version="1.0.0" match="greaterOrEqual"/>
-      <import feature="edu.kit.ipd.sdq.commons.util.mdsdprofiles.feature.source" version="1.0.0" match="greaterOrEqual"/>
-      <import feature="org.modelversioning.emfprofile.feature" version="1.0.0" match="greaterOrEqual"/>
-      <import feature="de.uka.ipd.sdq.identifier.source.feature" version="2.1.0" match="greaterOrEqual"/>
-      <import feature="org.palladiosimulator.pcm.source.feature" version="4.0.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="de.uka.ipd.sdq.identifier"/>
+      <import plugin="org.palladiosimulator.pcm"/>
+      <import plugin="de.uka.ipd.sdq.probfunction"/>
+      <import plugin="de.uka.ipd.sdq.stoex"/>
+      <import plugin="de.uka.ipd.sdq.units"/>
+      <import plugin="org.eclipse.ocl.pivot"/>
+      <import plugin="org.eclipse.xtext.xbase" version="2.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.xbase.lib"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="de.uka.ipd.sdq.identifier.edit"/>
+      <import plugin="org.palladiosimulator.pcm.edit"/>
+      <import plugin="de.uka.ipd.sdq.probfunction.edit"/>
+      <import plugin="de.uka.ipd.sdq.stoex.edit"/>
+      <import plugin="de.uka.ipd.sdq.units.edit"/>
+      <import plugin="edu.kit.ipd.sdq.commons.util.java"/>
+      <import plugin="org.modelversioning.emfprofile" version="1.1.0" match="greaterOrEqual"/>
    </requires>
+
    <plugin
          id="edu.kit.kastel.scbs.confidentialitymm"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-  <plugin
-      id="edu.kit.kastel.scbs.confidentialitymm.edit"
-      download-size="0"
-      install-size="0"
-      version="0.0.0"
-      unpack="false"/>
-  <!--<plugin
-      id="edu.kit.kastel.scbs.confidentialitymm.editor"
-      download-size="0"
-      install-size="0"
-      version="0.0.0"
-      unpack="false"/>-->
-  <plugin
-      id="edu.kit.kastel.scbs.pcmconfidentialityprofile"
-      download-size="0"
-      install-size="0"
-      version="0.0.0"
-      unpack="false"/>
+
+   <plugin
+         id="edu.kit.kastel.scbs.confidentialitymm.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="edu.kit.kastel.scbs.pcmconfidentialityprofile"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>
