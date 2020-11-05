@@ -63,13 +63,41 @@
   </eSubpackages>
   <eSubpackages name="repository" nsURI="http://edu.kit.kastel.scbs.confidentiality.repository"
       nsPrefix="edu.kit.kastel.scbs.confidentiality.repository">
-    <eClassifiers xsi:type="ecore:EClass" name="ParametersAndDataPair" eSuperTypes="#//IdentifiedElement #//NamedElement">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterSources" lowerBound="1"
-          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ParametersAndDataPair" abstract="true"
+        eSuperTypes="#//IdentifiedElement #//NamedElement">
       <eStructuralFeatures xsi:type="ecore:EReference" name="dataTargets" lowerBound="1"
           upperBound="-1" eType="#//data/DataIdentifying"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AddedServiceParameter" eSuperTypes="#//IdentifiedElement #//NamedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterSource" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TypedParametersAndDataPair" eSuperTypes="#//repository/ParametersAndDataPair">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameterSources" upperBound="-1"
+          eType="#//repository/ParameterSource" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GenericParametersAndDataPair" eSuperTypes="#//repository/ParametersAndDataPair">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterSources" lowerBound="1"
+          upperBound="-1" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterReferencingSource" eSuperTypes="#//repository/ParameterSource">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/Parameter"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="operationSignature" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationSignature"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CallSource" eSuperTypes="#//repository/ParameterSource">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1"
+          eType="#//repository/StaticParameterSources" defaultValueLiteral="CALL"
+          unsettable="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ReturnSource" eSuperTypes="#//repository/ParameterSource">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1"
+          eType="#//repository/StaticParameterSources" defaultValueLiteral="RETURN"
+          unsettable="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="StaticParameterSources">
+      <eLiterals name="CALL"/>
+      <eLiterals name="RETURN" value="1"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="system" nsURI="http://edu.kit.kastel.scbs.confidentiality.system"
       nsPrefix="edu.kit.kastel.scbs.confidentiality.system">
